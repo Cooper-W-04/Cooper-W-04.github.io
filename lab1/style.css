@@ -1,0 +1,66 @@
+header{
+    background-color: blue;
+    text-align: center;
+    margin: 0;
+}
+img{
+    width: 75%; 
+    height: auto;
+    border-radius: 15%;
+}
+.footerImage{
+    width: 25%; 
+    height: auto;
+    border-radius: 0%;
+}
+nav{
+    background-color: beige;
+    text-align: center;
+    margin: 0;
+}
+body{
+    background-color: skyblue;
+    margin: 0;
+}
+#quote-p{
+    font-size: 1.5em;
+}
+footer{
+    background-color: white;
+    margin: 0;
+}
+#bottom-text{
+    font-size: 1em
+}
+a:hover {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#google-form{
+    text-align: center;
+}
+table {
+  margin-left: auto;
+  margin-right: auto; 
+}
+th{
+    background-color: aliceblue;
+}
+#footer-p{
+    text-align: left;
+}
+p{
+    text-align: center;
+}
+ul{
+    padding-left: 40%;
+}
+span{
+    padding-left: 35%;
+    font-weight: bold;
+}
