@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: white;
+    text-align: center;
+}
+
+.page-header {
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    padding: 2% 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.blurb {
+    width: 70%;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 4%;
+}
+
+.icon-container {
+    display: flex;
+    gap: 5%;
+    width: 80%;
+    justify-content: center;
+}
+
+.icon-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon-container img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.icon-container a:hover {
+    transform: scale(1.12);
+}
+
+.component-image {
+    width: 80%;
+    height: auto;
+    margin-bottom: 3%;
+}
+
+.component-image:hover {
+    transform: none;
+}
