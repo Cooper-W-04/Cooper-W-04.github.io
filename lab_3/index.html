@@ -3,52 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon Quiz!</title>
     <script src="js/script.js" defer></script>
-    <style src="css/style.css" rel="stylesheet"></style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>quiz Quiz</h1>
+    <h1>Simple Pokemon Quiz!</h1>
 
-    <div id="q1_div">
-        1. this is the first question with 3 radio buttons
-        <div id="q1_radio_div"></div>
-        <br>
-        <br>
+    <div id="quiz_container">
+        <div id="q1_div" class="question_box">
+            1. What is the first Pokemon in the National Pokedex?
+            <div id="q1_radio_div"></div>
+        </div>
+
+        <div id="q2_div" class="question_box">
+            2. What Pokemon is the evolved form of Girafarig?
+            <input type="text" id="q2TextBox">
+        </div>
+
+        <div id="q3_div" class="question_box">
+            3. What is the type with the least amount of Pokemon belonging to it?
+            <select id="q3">
+                <option value="">Select an Option</option>
+            </select>
+        </div>
+
+        <div id="q4_div" class="question_box">
+            4. How many Pokemon are pure Ground type?
+            <input type="number" id="q4" min="0" step="1">
+        </div>
+
+        <div id="q5_div" class="question_box">
+            5. Select the two types that make up the most common dual-typing of Pokemon.
+            <div id="q5_checkbox_div"></div>
+        </div>
+
+        <button>Submit Quiz</button>
+
+        <div id="results_box">
+            <div id="timesTaken">Times taken: 0</div>
+            <div id="message"></div>
+            <span id="score">this is the score</span>
+        </div>
     </div>
-
-    <div id="q2_div">
-        2. this is the second question with a text box
-        <input type="text" id="q2TextBox">
-        <br>
-        <br>
-    </div>
-
-    <div id = "q3_div">
-        3. this is the third question with a drop-down menu
-        <select id="q3">
-            <option value = "">Select an Option</option>
-        </select>
-        <br>
-        <br>
-    </div>
-
-    <div id="q4_div">
-        4. this is the fourth question with a number (number entry?)
-        <input type="number" id="q4" min="0" step="1">
-        <br>
-        <br>
-    </div>
-    
-    <div id="q5_div">
-        5. this is the fifth question with a checkbox
-        <div id="q5_checkbox_div"></div>
-        <br>
-        <br>
-    </div>
-
-    <button>Submit Quiz</button>
-
-    <span id="score">this is the score</span>
 </body>
 </html>
