@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tic Tac Toe!</title>
+	<script src="js/script.js" defer></script>
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+	<main class="page">
+		<header class="header">
+			<h1>Tic Tac Toe</h1>
+			<p class="subtitle">Pick X or O, then start.</p>
+		</header>
+
+		<section class="panel">
+			<div class="controls">
+				<div class="choice">
+					<span class="label">Choose letter:</span>
+					<label class="radio">
+						<input type="radio" name="letter" value="x" checked />
+						<span>X</span>
+					</label>
+					<label class="radio">
+						<input type="radio" name="letter" value="o" />
+						<span>O</span>
+					</label>
+				</div>
+
+				<div class="buttons">
+					<button id="startBtn" class="btn primary">Start Game</button>
+					<button id="restartBtn" class="btn" disabled>Restart</button>
+				</div>
+			</div>
+
+			<p id="status" class="status">Click “Start Game” to begin.</p>
+		</section>
+
+		<section class="boardSection">
+			<div id="boardWrap">
+				<img
+					id="boardImage"
+					src="img/blank_board.png"
+					alt="Tic Tac Toe Board"
+				/>
+				<div id="gridOverlay"></div>
+			</div>
+		</section>
+	</main>
 </body>
 </html>

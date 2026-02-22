@@ -1,0 +1,204 @@
+/* Base reset */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+	color: #111;
+	background: #f6f7fb;
+}
+
+/* Layout */
+.page {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 24px 16px 48px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.header h1 {
+	margin: 0;
+	font-size: 2rem;
+	letter-spacing: 0.2px;
+}
+
+.subtitle {
+	margin: 6px 0 0;
+	color: #555;
+}
+
+/* Control panel */
+.panel {
+	background: #fff;
+	border: 1px solid #e6e8ef;
+	border-radius: 14px;
+	padding: 14px 14px 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.choice {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.label {
+	font-weight: 600;
+	color: #222;
+}
+
+/* Radio styling */
+.radio {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	border: 1px solid #e6e8ef;
+	border-radius: 999px;
+	background: #fafbff;
+	cursor: pointer;
+	user-select: none;
+}
+
+.radio input {
+	accent-color: #4f46e5;
+}
+
+.radio span {
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.buttons {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.btn {
+	border: 1px solid #d7dbe7;
+	background: #fff;
+	color: #111;
+	padding: 10px 14px;
+	border-radius: 12px;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.03);
+	transition: transform 0.06s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+	background: #f3f5ff;
+}
+
+.btn:active {
+	transform: translateY(1px);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.btn:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+.btn.primary {
+	background: #4f46e5;
+	border-color: #4f46e5;
+	color: #fff;
+}
+
+.btn.primary:hover {
+	background: #4338ca;
+}
+
+/* Status text */
+.status {
+	margin: 10px 0 0;
+	padding: 10px 12px;
+	border-radius: 12px;
+	background: #f2f4ff;
+	border: 1px solid #e3e7ff;
+	color: #1a1a1a;
+}
+
+/* Board area */
+.boardSection {
+	display: flex;
+	justify-content: center;
+}
+
+#boardWrap {
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	background: #fff;
+	border: 1px solid #e6e8ef;
+	border-radius: 16px;
+	padding: 14px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Board image */
+#boardImage {
+	display: block;
+	max-width: min(90vw, 520px);
+	height: auto;
+	border-radius: 10px;
+}
+
+/* Overlay grid */
+#gridOverlay {
+	position: absolute;
+	left: 14px; /* matches #boardWrap padding */
+	top: 14px;  /* matches #boardWrap padding */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	pointer-events: auto;
+}
+
+/* Clickable squares (created as <button> in JS) */
+#gridOverlay button {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 1px solid transparent;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: background 0.15s ease, outline 0.15s ease;
+}
+
+#gridOverlay button:hover {
+	background: rgba(79, 70, 229, 0.10);
+	outline: 2px solid rgba(79, 70, 229, 0.25);
+	outline-offset: -2px;
+}
+
+/* Make sure images placed inside stay centered */
+#gridOverlay img {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	pointer-events: none;
+}
