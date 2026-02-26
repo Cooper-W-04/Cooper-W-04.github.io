@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Sign Up Page</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1> Sign Up Form </h1>
@@ -14,24 +15,35 @@
         Last Name: <input type="text"><br> 
         Email: <input type="text"><br> 
         Phone Number:<input type="text"><br><br>
-        Zip Code: <input id="zipCodeInput" type="text"><br>
+
+        Zip Code: <input id="zipCodeInput" type="text">
+        <span id="zipMsg"></span>
+        <br>
+
         City: <span id="cityDisplay"></span>
         <br>
         Latitude: <span id="latitudeDisplay"></span>
         <br>
         Longitude: <span id="longitudeDisplay"></span>
         <br><br>
+
         State:  <select id="stateSelector">
             <option value="">Choose an state</option>
         </select><br>
+
         Select a County: <select id="countySelector">
             <option value="">Choose an county</option>
         </select><br>
 
-        Desired Username: <input type="text"><br>
+        Desired Username: <input id="usernameInput" type="text">
+        <span id="usernameMsg"></span>
+        <br>
+
         Password: <input id="passwordBox" type="password"><br>
-        Type Password Again: <input type="password"><br>
-        <input type="submit" value="Sign up!">
+        Type Password Again: <input id="retypePasswordBox" type="password"><br>
+
+        <input id="submitBtn" type="submit" value="Sign up!">
+        <div id="submitMsg"></div>
     </fieldset>
 
     <script src="js/script.js"></script>
