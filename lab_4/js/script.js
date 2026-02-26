@@ -86,8 +86,8 @@ stateSelector.addEventListener("change", async function getStateData() {
 
         countyList.forEach(county => {
             const option = document.createElement("option");
-            option.text = county;
-            option.value = county;
+            option.text = county.county;
+            option.value = county.county;
             countySelector.appendChild(option);
         });
 
